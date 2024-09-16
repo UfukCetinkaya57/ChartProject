@@ -1,0 +1,80 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Chart Application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2>Dynamic Chart Application</h2>
+
+        <form id="chartForm">
+            <div class="form-group">
+                <label for="server">Server:</label>
+                <input type="text" class="form-control" id="server" placeholder="Server adını girin" required>
+            </div>
+            <div class="form-group">
+                <label for="database">Database:</label>
+                <input type="text" class="form-control" id="database" placeholder="Database adını girin" required>
+            </div>
+            <div class="form-group">
+                <label for="trustedConnection">Trusted Connection:</label>
+                <select class="form-control" id="trustedConnection">
+                    <option value="True">True</option>
+                    <option value="False">False</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="selectedProcedure">Stored Procedures:</label>
+                <select class="form-control" id="selectedProcedure">
+                    <option value="">Select Procedure</option>
+                </select>
+            </div>
+            <div id="dynamicParams"></div>
+
+
+            <div class="form-group">
+                <label for="viewSelect">Views:</label>
+                <select class="form-control" id="viewSelect">
+                    <option value="">Select View</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="selectedFunction">Functions:</label>
+                <select class="form-control" id="selectedFunction">
+                    <option value="">Select Function</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="chartType">Chart Türü:</label>
+                <select class="form-control" id="chartType">
+                    <option value="line">Line Chart</option>
+                    <option value="bar">Bar Chart</option>
+                    <option value="radar">Radar Chart</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Chart Oluştur</button>
+        </form>
+        <canvas id="myChart" width="400" height="200"></canvas>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
+
+
